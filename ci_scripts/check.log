@@ -1,0 +1,23 @@
++ FLUIDDOCDIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs
++ OUTPUTDIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output
++ VERSIONSTR=develop
++++ dirname ./check_api_cn.sh
+++ cd .
+++ pwd
++ SCRIPT_DIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts
++ source /home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts/utils.sh
++ need_check_cn_doc_files=docs/api/paddle/index_add__cn.rst
++ echo docs/api/paddle/index_add__cn.rst
+docs/api/paddle/index_add__cn.rst
++ echo 'Run COPY-FROM parsed into Sample Code Check'
+Run COPY-FROM parsed into Sample Code Check
++ python check_copy_from_parsed_into_sample_code.py /home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output/zh/develop/ docs/api/paddle/index_add__cn.rst
+COPY-FROM check files:  ['docs/api/paddle/index_add__cn.rst']  in  /home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output/zh/develop/
+Traceback (most recent call last):
+  File "/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts/check_copy_from_parsed_into_sample_code.py", line 46, in <module>
+    res = run_copy_from_check(sys.argv[1], sys.argv[2:])
+  File "/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts/check_copy_from_parsed_into_sample_code.py", line 32, in run_copy_from_check
+    error_parsed = check_copy_from_not_parsed(
+  File "/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts/check_copy_from_parsed_into_sample_code.py", line 6, in check_copy_from_not_parsed
+    with open(file, "r") as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output/zh/develop/docs/api/paddle/index_add__cn.html'

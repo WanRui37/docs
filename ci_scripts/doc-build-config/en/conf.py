@@ -13,7 +13,7 @@ try:
 except:
     print("import paddle error")
 
-breathe_projects = {"PaddlePaddle": "/docs/doxyoutput/xml"}
+breathe_projects = {"PaddlePaddle": "/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/docs/doxyoutput/xml"}
 breathe_default_project = "PaddlePaddle"
 MarkdownParser = parser.CommonMarkParser
 AutoStructify = transform.AutoStructify
@@ -55,7 +55,7 @@ extensions = [
 
 exhale_args = {
     # These arguments are required
-    "containmentFolder": "/FluidDoc/docs/inference_api",
+    "containmentFolder": "/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/docs/inference_api",
     "rootFileName": "library_root.rst",
     "rootFileTitle": "Inference API",
     "doxygenStripFromPath": "..",
@@ -65,7 +65,7 @@ exhale_args = {
     # TIP: if using the sphinx-bootstrap-theme, you need
     # "treeViewIsBootstrap": True,
     "exhaleExecutesDoxygen": True,
-    "exhaleDoxygenStdin": "INPUT=/FluidDoc/docs/inference_api/\nMACRO_EXPANSION=NO\nSKIP_FUNCTION_MACROS=YES",
+    "exhaleDoxygenStdin": "INPUT=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/docs/inference_api/\nMACRO_EXPANSION=NO\nSKIP_FUNCTION_MACROS=YES",
     "verboseBuild": True,
     "generateBreatheFileDirectives": True,
 }

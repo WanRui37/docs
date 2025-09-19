@@ -52,14 +52,14 @@ for lang in en zh ; do
   read -u6
   {
     mkdir -p ${OUTPUTDIR}/${lang}/${VERSIONSTR}
-    /usr/local/bin/sphinx-build -b ${OUTPUTFORMAT} -j ${sphinx_thread} -d /var/doctrees -c ${CONFIGDIR}/${lang} ${DOCROOT} ${OUTPUTDIR}/${lang}/${VERSIONSTR}
+    /home/ic611/anaconda3/envs/fast-develop/bin/sphinx-build -b ${OUTPUTFORMAT} -j ${sphinx_thread} -d /home/ic611/workspace/wr/LLM/PaddlePaddle/doctrees -c ${CONFIGDIR}/${lang} ${DOCROOT} ${OUTPUTDIR}/${lang}/${VERSIONSTR}
     if [ "${OUTPUTFORMAT}" = "html" ] ; then
       INDEXFILE="${OUTPUTDIR}/${lang}/${VERSIONSTR}/index_${lang}.html"
       if [ "${lang}" = "zh" ] ; then
         INDEXFILE="${OUTPUTDIR}/${lang}/${VERSIONSTR}/index_cn.html"
       fi
       if [ ! -f ${INDEXFILE} ] ; then
-        /usr/local/bin/sphinx-build -b ${OUTPUTFORMAT} -j ${sphinx_thread} -d /var/doctrees -c ${CONFIGDIR}/${lang} ${DOCROOT} ${OUTPUTDIR}/${lang}/${VERSIONSTR}
+        /home/ic611/anaconda3/envs/fast-develop/bin/sphinx-build -b ${OUTPUTFORMAT} -j ${sphinx_thread} -d /home/ic611/workspace/wr/LLM/PaddlePaddle/doctrees -c ${CONFIGDIR}/${lang} ${DOCROOT} ${OUTPUTDIR}/${lang}/${VERSIONSTR}
       fi
 
       if [ "${lang}" = "en" ] ; then

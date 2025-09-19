@@ -1,0 +1,15 @@
++ FLUIDDOCDIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs
++ OUTPUTDIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output
++ VERSIONSTR=develop
++++ dirname ./ci_scripts/check_api_cn.sh
+++ cd ./ci_scripts
+++ pwd
++ SCRIPT_DIR=/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts
++ source /home/ic611/workspace/wr/LLM/PaddlePaddle/docs/ci_scripts/utils.sh
++ need_check_cn_doc_files='docs/api/paddle/index_add__cn.rst api/paddle/index_add_cn.rst'
++ echo docs/api/paddle/index_add__cn.rst api/paddle/index_add_cn.rst
+docs/api/paddle/index_add__cn.rst api/paddle/index_add_cn.rst
++ echo 'Run COPY-FROM parsed into Sample Code Check'
+Run COPY-FROM parsed into Sample Code Check
++ python check_copy_from_parsed_into_sample_code.py /home/ic611/workspace/wr/LLM/PaddlePaddle/docs/output/zh/develop/ docs/api/paddle/index_add__cn.rst api/paddle/index_add_cn.rst
+python: can't open file '/home/ic611/workspace/wr/LLM/PaddlePaddle/docs/check_copy_from_parsed_into_sample_code.py': [Errno 2] No such file or directory
